@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">    
+    <link rel="stylesheet" href="https://getbootstrap.com/docs/4.0/examples/sticky-footer-navbar/sticky-footer-navbar.css">
+    <link rel="stylesheet" href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css">
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/sticky-footer-navbar/">
+    <style >
+      .date-sex {
+        display: flex;
+      }
+      .main {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 50px;
+      }
+      .title {
+          text-align: center;
+      }
+      .button {
+          width: 100%;
+          margin:10px;
+      }
+      .ma {
+        margin-left: 5px;
+      }
+    </style>
+  </head>
+  <body>
+   <div class="main">
+        
+        <div>
+          <div class="title">
+           
+              <h4 class="h4-title">Đăng ký </h4>
+              <p class="detail">Hãy Điền Form Bên Dưới </p>
+            
+          </div>
+          <div class="form-group">    
+            <input type="text" class="form-control" id="name"  placeholder="Tên *" required>    
+          </div>
+          <div class="form-group date-sex ">    
+            <input type="date" class="form-control" id="dateOfBirth"  placeholder="Ngày Sinh">
+            <select  class="form-control ma" id="sex">
+              <option value="Name">Nam</option>
+              <option value="Nữ">Nữ</option>
+              <option value ="Khác">Khác</option>              
+            </select>
+          </div>
+          <div class="form-group">    
+            <input type="text" class="form-control" id="phone"  placeholder="Số Điện Thoại *" required>    
+          </div>
+          <div class="form-group">    
+            <input type="text" class="form-control" id="address"  placeholder="Địa Chỉ">    
+          </div>
+          <div class="form-group">    
+            <input type="password" class="form-control" id="password"  placeholder="Mật khẩu *" required>    
+          </div>
+          <div>
+            <p>
+              Mật Khẩu ít nhất 8 ký tự và phải đáp ứng 4 điều kiện sau
+            </p>
+            <ul>
+              <li>Các Số 0-9, Ví dụ: 2,6,7 </li>
+              <li>Các chử cái thường(nhỏ) a-z. Ví dụ: a, b, c</li>
+              <li>Chữ cái viết hoa(in hoa) A-Z , Ví dụ: A, E, R</li>
+              <li>Các ký tự không phải chử và số(ký tự đặc biệt): như !@#</li>
+            </ul>
+          </div>
+          <div class="form-group">    
+            <input type="password" class="form-control" id="passwordAgain"  placeholder="Xác nhận mật khẩu *" required>    
+          </div>
+           <div class="form-group">    
+            <input type="email" class="form-control" id="email"  placeholder="Địa chỉ mail *" required>    
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck0">
+            <label class="form-check-label" for="gridCheck">
+              Vui long nếu bạn muốn nhận thêm thông tin tin tức về Pizza Hut
+            </label>
+          </div>
+          
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck1">
+            <label class="form-check-label" for="gridCheck">
+              Vui long nếu bạn không muốn nhận thêm tin tức về các sản phẩm và thiết bị của các đối tác kinh doanh của bạn
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck2">
+            <label class="form-check-label" for="gridCheck">
+              Tôi đồng ý với điều khoản sử dụng  và hiểu rằng thông tin của tôi sẽ được sử dụng như như được mô tả trên trang này và chính sách Bảo Mật của Pizza HUt
+            </label>
+          </div>
+          <button class="btn btn-success button" onClick="check()" >Tiếp Theo </button>
+        </div>
+         
+
+   </div>
+   <script src="./form.js"></script>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<html>
+<head>
+<title>Bài 1</title>
+  <script>
+    function VDV(ma_VDV, hoten, ngay_sinh, giai_thuong) {
+      
+      this.ma_VDV = ma_VDV;
+      this.hoten = hoten;
+      this.ngay_sinh = ngay_sinh;
+      this.giai_thuong = giai_thuong;
+      
+      this.kiemTraDieuKien = function(startDate, age) {
+      
+        let dateOfBirth = this.ngay_sinh.split('/')
+        let isStartDate = startDate.split('/')
+        
+        if(isStartDate[2] - dateOfBirth[2] > age ){
+          return true
+        } else if (isStartDate[2] - dateOfBirth[2] == age){
+          if(isStartDate[0] >= dateOfBirth[0] && isStartDate[1] > dateOfBirth[1]){
+            return true
+          }
+        }
+        
+        // nếu thời gian thi đấu trừ cho năm sinh lơn hơn tuổi cần thiết thì return true
+        // nêu thời gian thi đấu cho năm sinh bằng 1 thì check xem ngày tháng sinh có lơn hơn hiện
+        // tại không, nếu lơn hơn hoặc bằng thì return true 
+        
+      }
+      this.themGiaiThuong = function(tenGiaiThuong) {
+        this.giai_thuong.push(tenGiaiThuong)
+        return this.giai_thuong.length
+      }
+      this.danhSachGiaiThuong = function() {
+        return this.giai_thuong    
+      }
+    }
+
+    let vanDongVien = new VDV("12", "Dao Ngoc Khue", "16/06/2000", [])
+    if(vanDongVien.kiemTraDieuKien("15/7/2022", 19)) {
+      console.log("Vận Động Viên Đủ Điều kiện")
+    }
+    else {
+      console.log("Vận Động Viên Chưa Đủ Điều kiện")
+    }
+
+    let them = vanDongVien.themGiaiThuong("Giải nhất")
+    console.log("sô lượng giải thường của VDV",them)
+
+    let danhSachGT = vanDongVien.danhSachGiaiThuong()
+    console.log(danhSachGT)
+  </script>
+</head>
+  <body>
+    <h3>kết quả em in trong console.log()</h3>
+  </body>
+</html>
